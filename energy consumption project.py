@@ -1,3 +1,5 @@
+###############################################YOU CAN NOT USE THIS CODE WITHOUT PERMISSION ################################
+
 # -*- coding:utf-8 -*-
 #firstApp.py
 # if __name__=="__main__":
@@ -6,7 +8,7 @@
 #     spark = SparkSession.builder.setMaster("local[*]").appName("test").getOrCreate()
 #1.load data
 df = spark.read.parquet("hdfs://namenode:9000/dis_materials/fast2_metadata.parquet").sample(fraction=0.2, seed=3)
-#df = spark.read.parquet("/user/s_feeds/xionglian/onedrive/task3")
+
 
 df = df.repartition(1000)
 #2. mapping data
